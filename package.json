@@ -1,0 +1,26 @@
+{
+  "name": "encurtador-links",
+  "version": "1.0.0",
+  "description": "Projeto para gerar um encurtador de links web.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sthephanytezza-dev/encurtador-links.git"
+  },
+  "author": "Sthephany Tezza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sthephanytezza-dev/encurtador-links/issues"
+  },
+  "homepage": "https://github.com/sthephanytezza-dev/encurtador-links#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.20"
+  }
+}
