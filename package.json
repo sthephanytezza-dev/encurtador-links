@@ -17,10 +17,13 @@
     "url": "https://github.com/sthephanytezza-dev/encurtador-links/issues"
   },
   "homepage": "https://github.com/sthephanytezza-dev/encurtador-links#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
   "dependencies": {
-    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
-    "nodemon": "^2.0.20"
+    "knex": "^2.3.0",
+    "mysql": "^2.18.1"
   }
 }

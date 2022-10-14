@@ -4,7 +4,7 @@ module.exports = {
   async createUrl(request, response) {
     try {
       const { url } = request.body;
-      const result = createUrlService(url);
+      const result = await createUrlService(url);
       response.send(result);
     } catch (error) {
       return response.status(400).send(error);
@@ -14,7 +14,7 @@ module.exports = {
     try {
       const { id } = request.params;
 
-      const url = getUrlSiteService(id);
+      const url = await getUrlSiteService(id);
 
       if (typeof url == "undefined") {
         return response

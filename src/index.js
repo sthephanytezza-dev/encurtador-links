@@ -1,17 +1,24 @@
 const express = require("express");
-const cors = require("cors");
-const path = require("path");
-const bodyParser = require("body-parser");
+const routes = require("./routes");
 require("dotenv").config();
 
 const app = express();
-const routes = require("./routes");
 
 app.use(express.json());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
 app.use(routes);
+
+// not found
+app.use((request, response, next) => {
+  const error = new Error("Not found");
+  error.status = 404;
+  next(error);
+});
+
+// catch all
+app.use((error, request, response, next) => {
+  response.status(error.status || 500);
+  response.json({ error: error.message });
+});
 
 app.listen(process.env.PORT || 3334, () =>
   console.log(`
